@@ -6,6 +6,8 @@ using UnityEngine;
 public class ChangeSize : MonoBehaviour
 {
     public float rotateAmountDegrees;
+    public float scaleAmount = 0.25f;
+    public float moveAmount = 0.25f;
 
     //In each script you will need this
     public TextMesh HUD;
@@ -27,15 +29,17 @@ public class ChangeSize : MonoBehaviour
     public void MakeBig()
     {
 
-        transform.localScale = new UnityEngine.Vector3(transform.localScale.x + 0.25f, transform.localScale.y + 0.25f, transform.localScale.z + 0.25f);
+        transform.localScale = new UnityEngine.Vector3(transform.localScale.x + scaleAmount, transform.localScale.y + scaleAmount, transform.localScale.z + scaleAmount);
 
         HUD.text = transform.localScale.ToString(); //update the HUD text after making a change.
+
+
 
     }
 
     public void MakeSmall()
     {
-        transform.localScale = new UnityEngine.Vector3(transform.localScale.x - 0.25f, transform.localScale.y - 0.25f, transform.localScale.z - 0.25f);
+        transform.localScale = new UnityEngine.Vector3(transform.localScale.x - scaleAmount, transform.localScale.y - scaleAmount, transform.localScale.z - scaleAmount);
         HUD.text = transform.localScale.ToString(); //update the HUD text.
 
 
