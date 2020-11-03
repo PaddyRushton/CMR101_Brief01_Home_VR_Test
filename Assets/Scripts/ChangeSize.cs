@@ -27,7 +27,7 @@ public class ChangeSize : MonoBehaviour
     public void MakeBig()
     {
 
-        transform.localScale = new UnityEngine.Vector3(transform.localScale.x + 1, transform.localScale.y + 1, transform.localScale.z + 1);
+        transform.localScale = new UnityEngine.Vector3(transform.localScale.x + 0.25f, transform.localScale.y + 0.25f, transform.localScale.z + 0.25f);
 
         HUD.text = transform.localScale.ToString(); //update the HUD text after making a change.
 
@@ -35,7 +35,7 @@ public class ChangeSize : MonoBehaviour
 
     public void MakeSmall()
     {
-        transform.localScale = new UnityEngine.Vector3(transform.localScale.x - 1, transform.localScale.y - 1, transform.localScale.z - 1);
+        transform.localScale = new UnityEngine.Vector3(transform.localScale.x - 0.25f, transform.localScale.y - 0.25f, transform.localScale.z - 0.25f);
         HUD.text = transform.localScale.ToString(); //update the HUD text.
 
 
@@ -44,7 +44,7 @@ public class ChangeSize : MonoBehaviour
     public void RotateRight()
     {
 
-        transform.Rotate(0.0f, -rotateAmountDegrees, 0.0f, Space.Self);
+        transform.Rotate(1.0f, -rotateAmountDegrees, 1.0f, Space.Self);
         HUD.text = transform.rotation.ToString();
 
     }
